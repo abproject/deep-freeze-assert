@@ -19,7 +19,7 @@ obj.a = 2; // throws an error
 ```
 ### TypeScript
 ```typescript
-import { deepFreezeAssert } from 'deepFreezeAssert';
+import { deepFreezeAssert } from 'deep-freeze-assert';
 const freezedObj = deepFreezeAssert(obj);
 obj.a = 2; // throws an error 
 ```
