@@ -1,0 +1,41 @@
+{
+  "name": "deep-freeze-assert",
+  "version": "0.0.1",
+  "description": "Deep Freeze Assert",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abproject/deep-freeze-assert.git"
+  },
+  "author": "Anton Bezpalov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abproject/deep-freeze-assert/issues"
+  },
+  "homepage": "https://github.com/abproject/deep-freeze-assert#readme",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.7.2"
+  }
+}
