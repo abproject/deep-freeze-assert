@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:cover": "jest --collectCoverage"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@types/jest": "^22.2.2",
+    "coveralls": "^3.0.0",
     "jest": "^22.4.3",
     "ts-jest": "^22.4.2",
     "typescript": "^2.7.2"
