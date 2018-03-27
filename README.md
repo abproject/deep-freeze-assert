@@ -132,6 +132,7 @@ Any value
 
 ##### config
 Null or an Object with the next structure
+
 | Property | Optional | Type | Default | Description |
 |---|:---:|:---:|---|---|
 |silent|`optional`|`boolean`|false|`false` - in case of mutation throws an error <br> `true` - in case of mutation writes warning to log|
