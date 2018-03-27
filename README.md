@@ -129,6 +129,7 @@ Any value
     <td align="center">-</td>
   </tr>
 </table>
+
 ##### config
 Null or an Object with the next structure
 | Property | Optional | Type | Default | Description |
