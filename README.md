@@ -1,5 +1,8 @@
+[![Build Status](https://travis-ci.org/abproject/deep-freeze-assert.svg?branch=master)](https://travis-ci.org/abproject/deep-freeze-assert) [![Coverage Status](https://coveralls.io/repos/github/abproject/deep-freeze-assert/badge.svg?branch=master)](https://coveralls.io/github/abproject/deep-freeze-assert?branch=master)
 # deep-freeze-assert
+
 A Node.js module for listening to attempts of mutation objects and arrays.
+
 ## Installation 
 ```sh
 npm install deep-freeze-assert --save
