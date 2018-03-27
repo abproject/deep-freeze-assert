@@ -1,2 +1,2 @@
-import { DeletePropertyFunction } from "./types";
+import { DeletePropertyFunction } from './types';
 export declare const deletePropertyThrow: DeletePropertyFunction;

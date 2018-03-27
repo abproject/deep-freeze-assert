@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function handler(setFn, deletePropertyFn) {
     return {
         set: (target, p, value, receiver) => {
-            return setFn.call(null, target, p, value);
+            return setFn.call(undefined, target, p, value);
         },
         deleteProperty: (target, p) => {
-            return deletePropertyFn.call(null, target, p);
+            return deletePropertyFn.call(undefined, target, p);
         }
     };
 }

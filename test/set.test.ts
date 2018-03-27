@@ -1,7 +1,7 @@
-import { deepFreezeAssert } from "../index";
+import { deepFreezeAssert } from '../index';
 
-describe("set immutability checks", () => {
-  test("object", () => {
+describe('set immutability checks', () => {
+  test('object', () => {
     const value = { a: 1 };
     const freezedValue = deepFreezeAssert(value);
     const mutationFn = () => {
@@ -10,7 +10,7 @@ describe("set immutability checks", () => {
     expect(mutationFn).toThrowError(`Attempt to set value=2 to property='a'`);
   });
 
-  test("object nested", () => {
+  test('object nested', () => {
     const value = { a: { b: { c: 1 } } };
     const freezedValue = deepFreezeAssert(value);
     const mutationFn = () => {
@@ -19,7 +19,7 @@ describe("set immutability checks", () => {
     expect(mutationFn).toThrowError(`Attempt to set value=2 to property='c'`);
   });
 
-  test("array", () => {
+  test('array', () => {
     const value = [1, 2, 3];
     const freezedValue = deepFreezeAssert(value);
     const mutationFn = () => {
@@ -28,7 +28,7 @@ describe("set immutability checks", () => {
     expect(mutationFn).toThrowError(`Attempt to set value=4 to property='3'`);
   });
 
-  test("array nested", () => {
+  test('array nested', () => {
     const value = [[[1, 2, 3]]];
     const freezedValue = deepFreezeAssert(value);
     const mutationFn = () => {
@@ -37,11 +37,11 @@ describe("set immutability checks", () => {
     expect(mutationFn).toThrowError(`Attempt to set value=4 to property='3'`);
   });
 
-  test("object nested in array", () => {
+  test('object nested in array', () => {
     const value = [[[{ a: { b: { c: 1 } } }]]];
     const freezedValue = deepFreezeAssert(value);
     const mutationFn = () => {
-      freezedValue[0][0][0].a.b.c = 2
+      freezedValue[0][0][0].a.b.c = 2;
     };
     expect(mutationFn).toThrowError(`Attempt to set value=2 to property='c'`);
   });

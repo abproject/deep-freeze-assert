@@ -1,20 +1,20 @@
-import { setThrowSilent } from "./set-throw-silent";
-import { setThrow } from "./set-throw";
-import { configDefault } from "./config-default";
-import { Config, ConfigOptions } from "./types";
-import { deletePropertyThrowSilent } from "./delete-property-throw-silent";
+import { setThrowSilent } from './set-throw-silent';
+import { setThrow } from './set-throw';
+import { configDefault } from './config-default';
+import { Config, ConfigOptions } from './types';
+import { deletePropertyThrowSilent } from './delete-property-throw-silent';
 
 export const configFactory: (config?: ConfigOptions) => Config = config => {
   if (config && config.silent === true) {
-    return Object.assign(
-      {},
-      configDefault,
-      {
-        setFn: setThrowSilent,
-        deletePropertyFn: deletePropertyThrowSilent
-      },
-      config
-    );
+    return {
+      ...configDefault,
+      setFn: setThrowSilent,
+      deletePropertyFn: deletePropertyThrowSilent,
+      ...config
+    };
   }
-  return Object.assign({}, configDefault, config);
+  return {
+    ...configDefault,
+    ...config
+  };
 };

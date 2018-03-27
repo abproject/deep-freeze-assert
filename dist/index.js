@@ -8,7 +8,7 @@ function deepFreezeAssert(target, config) {
         const array = [...target].map(item => deepFreezeAssert(item));
         return new Proxy(array, handler_1.handler(opts.setFn, opts.deletePropertyFn));
     }
-    else if (target !== null && typeof target === "object") {
+    else if (target !== null && typeof target === 'object') {
         const obj = Object.assign({}, target);
         Object.keys(obj).map(prop => {
             obj[prop] = deepFreezeAssert(obj[prop]);

@@ -8,7 +8,8 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:cover": "jest --collectCoverage"
+    "test:cover": "jest --collectCoverage",
+    "lint": "tslint --config ./tslint.json --project ."
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "coveralls": "^3.0.0",
     "jest": "^22.4.3",
     "ts-jest": "^22.4.2",
+    "tslint": "^5.9.1",
     "typescript": "^2.7.2"
   }
 }

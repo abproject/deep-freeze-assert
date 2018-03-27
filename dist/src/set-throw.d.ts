@@ -1,2 +1,2 @@
-import { SetFunction } from "./types";
+import { SetFunction } from './types';
 export declare const setThrow: SetFunction;
