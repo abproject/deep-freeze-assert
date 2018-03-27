@@ -1,12 +1,13 @@
 {
   "name": "deep-freeze-assert",
-  "version": "0.0.1",
-  "description": "Deep Freeze Assert",
+  "version": "1.0.0",
+  "description": "A Node.js module for listening to attempts of mutation objects and arrays.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
