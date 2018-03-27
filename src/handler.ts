@@ -3,12 +3,10 @@ import { SetFunction, DeletePropertyFunction } from "./types";
 export function handler(setFn: SetFunction, deletePropertyFn: DeletePropertyFunction) {
   return {
     set: (target: any, p: PropertyKey, value: any, receiver: any): boolean => {
-      setFn.call(null, target, p, value);
-      return true;
+      return setFn.call(null, target, p, value);
     },
     deleteProperty: (target: any[], p: PropertyKey): boolean => {
-      deletePropertyFn.call(null, target, p);
-      return true;
+      return deletePropertyFn.call(null, target, p);
     }
   };
 }
