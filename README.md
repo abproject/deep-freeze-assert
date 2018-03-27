@@ -27,14 +27,14 @@ define(function(require,exports,module){
   obj.a = 2; // throws an error 
 });
 ```
-##Methods
-###deepFreezeAssert(target, [config])
+## Methods
+### deepFreezeAssert(target, [config])
 
 Return either a deep [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) (if target is an **Object** or an **Array**) with listeners on [set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) and [deleteProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty) traps, or itself (if target is a primitive or null).
 In case of nesting, traps will be bound recursively.
-#####target
+##### target
 Any value
-######Behavior
+###### Behavior
 <table>
   <tr>
     <th>Target</th>
@@ -129,7 +129,7 @@ Any value
     <td align="center">-</td>
   </tr>
 </table>
-#####config
+##### config
 Null or an Object with the next structure
 | Property | Optional | Type | Default | Description |
 |---|:---:|:---:|---|---|
