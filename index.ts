@@ -1,4 +1,4 @@
-import { Config } from './dist/src/config.d';
+import { Config } from './src/types';
 import { configFactory } from './src/config-factory';
 import { handler } from './src/handler';
 
